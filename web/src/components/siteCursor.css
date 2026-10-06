@@ -1,0 +1,68 @@
+html[data-app-cursor="idle"],
+html[data-app-cursor="idle"] *,
+html[data-app-cursor="hover"],
+html[data-app-cursor="hover"] * {
+  cursor: none !important;
+}
+
+.siteCursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 100000;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.siteCursorDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #faf6eb;
+  box-shadow: 0 0 8px rgba(184, 154, 106, 0.75);
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+.siteCursorRing {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(250, 246, 235, 0.06);
+  backdrop-filter: blur(7px) saturate(1.12);
+  -webkit-backdrop-filter: blur(7px) saturate(1.12);
+  box-shadow:
+    inset 0 0 0 1px rgba(242, 232, 212, 0.46),
+    0 6px 22px rgba(0, 0, 0, 0.32);
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+.siteCursorArrow {
+  width: 22px;
+  height: 22px;
+  transform: translate(-2px, -2px);
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.45));
+  will-change: transform;
+}
+
+.siteCursorArrow svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+html[data-app-cursor="idle"] .siteCursorDot,
+html[data-app-cursor="idle"] .siteCursorRing,
+html[data-app-cursor="hover"] .siteCursorArrow {
+  opacity: 1;
+}
+
+html[data-app-cursor="hover"] .siteCursorDot,
+html[data-app-cursor="hover"] .siteCursorRing,
+html[data-app-cursor="idle"] .siteCursorArrow,
+html[data-app-cursor="native"] .siteCursor,
+html[data-app-cursor="off"] .siteCursor {
+  opacity: 0;
+}

@@ -1,0 +1,20 @@
+.eyeLogo {
+  display: block;
+  width: fit-content;
+  margin: 0 0 2.8vh;
+  text-decoration: none;
+  isolation: isolate;
+  filter: drop-shadow(0 0 18px rgba(10, 10, 10, 0.85));
+}
+
+.eyeLogoMark {
+  display: block;
+  width: min(460px, 78vw);
+  height: auto;
+  aspect-ratio: 34 / 15;
+}
+
+.eyeLogo:focus-visible {
+  outline: 1px solid #ff6b35;
+  outline-offset: 6px;
+}
